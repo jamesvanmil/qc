@@ -2,7 +2,10 @@ source 'https://rubygems.org'
 ruby '2.1.1'
 #ruby-gemset=qc
 gem 'active_sierra', git: 'git@github.com:uclibs/active_sierra.git'
-gem 'rspec-rails',   group: :test
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails', "~> 4.0"
+end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
 # Use sqlite3 as the database for Active Record
